@@ -1,0 +1,10 @@
+<!-- <p>add-todo works!</p> -->
+
+<div class="container">
+    <form [formGroup]="todoForm">
+        <input type="text" formControlName="todoItem">
+        <small *ngIf="! todoForm.get('todoItem').valid && todoForm.get('todoItem').touched">"Please enter some valid value"</small>
+        <br> <button class="btn btn-warning" (click)="addTodo()" [disabled]="!todoForm.valid">Add Todo</button>
+    </form>
+
+</div>
